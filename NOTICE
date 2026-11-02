@@ -1,0 +1,29 @@
+VPRune research release
+
+This repository isolates the final training-free VPRune method. Its core
+code is extracted/adapted from the project's local research implementation,
+not a verbatim copy of all official CDPruner baseline code.
+
+Algorithmic attribution:
+* Visual-only DPP uses the cosine Gram kernel employed by CDPruner, with
+  its text-relevance conditioning removed. Greedy incremental Cholesky
+  MAP inference follows Chen et al. (2018). DPP is not claimed as new.
+* Position preservation follows Grounding-Aware Token Pruning (GAP).
+  Original position IDs are not claimed as a new positional embedding.
+* Similarity-guided recycling assigns discarded features to nearest
+  retained features and applies group-softmax convex fusion. Similarity
+  means feature-space similarity, not guaranteed spatial adjacency.
+
+Dependencies are separately licensed. FastVLM's official model code and
+weights are downloaded by Transformers only after explicit user consent;
+they are NOT redistributed in this source tree. Consult their Apple and
+third-party notices. The model weights are subject to Apple's research
+license; this package's Apache-2.0 license does not relicense them or grant
+commercial rights to them. No benchmark images or model weights ship here.
+
+References:
+FastVLM: https://github.com/apple/ml-fastvlm
+CDPruner: https://arxiv.org/abs/2506.10967
+GAP: https://arxiv.org/abs/2506.21873
+Fast Greedy MAP Inference for Determinantal Point Process to Improve
+Recommendation Diversity (Chen et al., 2018): https://arxiv.org/abs/1709.05135
