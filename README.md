@@ -1,5 +1,7 @@
 # VPRune
 
+Official code for our paper [**VPRune: Efficient Training-free Pre-LLM Visual Token Pruning**](https://arxiv.org/abs/2609.24485).
+
 **Training-free visual token pruning for FastVLM: visual-only diversity selection, position preservation, and similarity-guided token recycling.**
 
 This standalone research implementation contains the final VPRune method. It runs independently of the original experimental repository. Baseline pruning methods, training controllers, private data, server configurations, and model weights are excluded.
@@ -117,7 +119,7 @@ VPRune builds on the following work:
 - [Chen et al., 2018](https://arxiv.org/abs/1709.05135): fast greedy DPP MAP inference.
 - [GAP](https://arxiv.org/abs/2506.21873): preservation of original position IDs.
 
-Paper metadata and a formal citation will be added when available. Historical accuracy tables, device benchmark results, dataset assets, and SSH connection details are excluded from this source release.
+If you use this code in your research, please cite [our VPRune paper](https://arxiv.org/abs/2609.24485) and acknowledge the relevant upstream work. Historical accuracy tables, device benchmark results, dataset assets, and SSH connection details are excluded from this source release.
 
 ## Prepare a source archive
 
